@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Water Gun | The Arena</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="game-container">
+        
+        <section class="game-info">
+            <h1>The Arena</h1>
+            <div class="scoreboard">
+                <div class="score">
+                    <p>Wins</p>
+                    <span id="win-score">0</span>
+                </div>
+                <div class="score">
+                    <p>Losses</p>
+                    <span id="loss-score">0</span>
+                </div>
+                <div class="score">
+                    <p>Draws</p>
+                    <span id="draw-score">0</span>
+                </div>
+            </div>
+            <button id="reset-btn">New Game</button>
+        </section>
+
+        <section class="battle-arena">
+            <div class="competitor-area" id="computer-area">
+                <h2>Computer</h2>
+                <div class="choice-display" id="computer-choice-display">
+                    <span>?</span>
+                </div>
+            </div>
+
+            <div class="result-area">
+                <p id="result-text" aria-live="polite">Make Your Move!</p>
+            </div>
+
+            <div class="competitor-area" id="player-area">
+                <h2>You</h2>
+                <div class="choice-display" id="player-choice-display">
+                    <span>?</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="controls">
+            <h3>Choose Your Weapon</h3>
+            <div class="choices">
+                <button class="choice-btn" data-choice="snake" aria-label="Snake">🐍</button>
+                <button class="choice-btn" data-choice="water" aria-label="Water">💧</button>
+                <button class="choice-btn" data-choice="gun" aria-label="Gun">🔫</button>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

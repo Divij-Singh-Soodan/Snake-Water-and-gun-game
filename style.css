@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Press+Start+2P&display=swap');
+
+:root {
+    --bg-color: #1a1a2e;
+    --primary-color: #16213e;
+    --secondary-color: #0f3460;
+    --accent-color: #e94560;
+    --font-color: #dcdcdc;
+    --font-alt-color: #a0a0a0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.game-container {
+    background: var(--primary-color);
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    padding: 2rem;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+/* Game Info Section */
+.game-info h1 {
+    font-family: 'Press Start 2P', cursive;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1.5rem;
+}
+
+.score {
+    background: var(--secondary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    min-width: 80px;
+}
+.score p {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: var(--font-alt-color);
+}
+.score span {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+#reset-btn {
+    font-family: 'Press Start 2P', cursive;
+    background: var(--accent-color);
+    color: var(--font-color);
+    border: none;
+    border-radius: 5px;
+    padding: 0.8rem 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-bottom: 2rem;
+}
+#reset-btn:hover {
+    background: #ff637f;
+}
+
+/* Battle Arena Section */
+.battle-arena {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.competitor-area {
+    background: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 15px;
+    flex: 1;
+}
+
+.competitor-area h2 {
+    margin-top: 0;
+    color: var(--font-alt-color);
+}
+
+.choice-display {
+    background: var(--bg-color);
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    transition: all 0.3s ease;
+}
+
+/* Styling for when a choice is made */
+.choice-display.active {
+    background: var(--accent-color);
+    transform: scale(1.1);
+}
+
+.result-area {
+    flex-basis: 200px;
+}
+#result-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Controls Section */
+.controls h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.choice-btn {
+    font-size: 3rem;
+    padding: 1rem;
+    border-radius: 50%;
+    border: 3px solid var(--secondary-color);
+    background: var(--primary-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.choice-btn:hover {
+    transform: translateY(-5px);
+    background: var(--secondary-color);
+    border-color: var(--accent-color);
+}
+
+/* Animation Classes (from previous step, still needed) */
+.score.score-updated span {
+    transform: scale(1.2);
+    color: #2ecc71;
+    transition: transform 0.2s ease-out, color 0.2s ease-out;
+}
+
+.choices.disabled {
+    pointer-events: none;
+    opacity: 0.6;
+}
